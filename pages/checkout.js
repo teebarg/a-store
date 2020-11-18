@@ -62,8 +62,7 @@ const ProductName = styled.h1`
 `
 
 const Checkout = () => {
-	const { cart, setVisible } = useContext(storeContext)
-	setVisible(false)
+	const { cart} = useContext(storeContext)
 	return (
 		<React.Fragment>
 			<div className="p-4 md:px-8 lg:px-16 gap-4 grid-cols-1 grid md:grid-cols-5">

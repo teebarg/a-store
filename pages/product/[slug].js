@@ -9,7 +9,7 @@ import Star from '../../components/Star'
 import DeliveryDetails from '../../components/DeliveryDetails'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
-import CartControl from '../../components/cartControl'
+import CartControl from '../../components/CartControl'
 import styled from '@emotion/styled'
 import Loader from '../../components/Loader'
 import { device } from '../../styles/device'

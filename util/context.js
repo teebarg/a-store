@@ -1,6 +1,6 @@
 import React from 'react';
 
-const initialState = {setVisible: () => (true)};
+const initialState = {};
 const StoreContext = React.createContext(initialState);
 
 export const StoreProvider = StoreContext.Provider;
