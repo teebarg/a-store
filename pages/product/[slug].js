@@ -5,7 +5,7 @@ import ProductCanvas from '../../components/ProductCanvas'
 import Head from 'next/head'
 import { useProduct } from '../../queries/product'
 import Link from 'next/link'
-import Star from '../../components/star'
+import Star from '../../components/Star'
 import DeliveryDetails from '../../components/DeliveryDetails'
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
