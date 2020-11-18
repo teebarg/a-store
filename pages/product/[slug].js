@@ -13,6 +13,7 @@ import CartControl from '../../components/CartControl'
 import styled from '@emotion/styled'
 import Loader from '../../components/Loader'
 import { device } from '../../styles/device'
+import { useRouter } from 'next/router'
 
 const Breadcrumb = styled.a`
 	cursor: pointer;
@@ -43,8 +44,10 @@ const H3 = styled.h3`
 	}
 `
 
-const ProductPage = ({ slug }) => {
-	const { status, data, error, isFetching } = useProduct({ product: slug })
+const ProductPage = () => {
+	const router = useRouter()
+  const { slug } = router.query
+	const { status, data } = useProduct({ product: slug })
 
 	let product
 
@@ -167,13 +170,6 @@ const ProductPage = ({ slug }) => {
 			)}
 		</React.Fragment>
 	)
-}
-
-export async function getServerSideProps({ params: { slug } }) {
-	const data = { slug }
-	return {
-		props: data,
-	}
 }
 
 export default ProductPage

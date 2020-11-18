@@ -9,6 +9,8 @@ import styled from '@emotion/styled'
 import Head from 'next/head'
 import { useCategory } from '../../queries/categories'
 import { device } from '../../styles/device'
+import { useRouter } from 'next/router'
+
 
 const Button = styled.button`
 	background-color: #232020;
@@ -38,8 +40,10 @@ const H3 = styled.h3`
 	}
 `
 
-const CategoryPage = ({ category }) => {
-	const { status, data, error, isFetching } = useCategory({ category })
+const CategoryPage = () => {
+	const router = useRouter()
+  const { category } = router.query
+	const { status, data } = useCategory({ category })
 
 	let banner = null
 	let products = []
@@ -101,13 +105,6 @@ const CategoryPage = ({ category }) => {
 			)}
 		</React.Fragment>
 	)
-}
-
-export async function getServerSideProps({ params: { slug } }) {
-	const data = { category: slug }
-	return {
-		props: data,
-	}
 }
 
 export default CategoryPage
