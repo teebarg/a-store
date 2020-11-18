@@ -257,7 +257,7 @@ const Index = () => {
 								<div className="video-grids-info grid grid-cols-1 md:grid-cols-3 items-center bg-hash">
 									<div className="col-span-2">
 										<Player
-											poster={videoad && videoad.publicURL}
+											poster={videoad && videoad.sourceUrl}
 											aspectRatio="16:9"
 										>
 											<source src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
@@ -350,15 +350,6 @@ const Index = () => {
 			)}
 		</React.Fragment>
 	)
-}
-
-Index.getInitialProps = async () => {
-	// const res = await fetch(
-	// 	'https://api.github.com/repos/ooade/NextSimpleStarter'
-	// )
-	// const json = await res.json()
-	// return { stars: json.stargazers_count }
-	return []
 }
 
 export default Index

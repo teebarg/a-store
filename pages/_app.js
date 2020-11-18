@@ -9,16 +9,16 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 export default class MyApp extends App {
-	static async getInitialProps({ Component, ctx }) {
-		return {
-			pageProps: {
-				// Call page-level getInitialProps
-				...(Component.getInitialProps
-					? await Component.getInitialProps(ctx)
-					: {}),
-			},
-		}
-	}
+	// static async getInitialProps({ Component, ctx }) {
+	// 	return {
+	// 		pageProps: {
+	// 			// Call page-level getInitialProps
+	// 			...(Component.getInitialProps
+	// 				? await Component.getInitialProps(ctx)
+	// 				: {}),
+	// 		},
+	// 	}
+	// }
 
 	componentDidMount() {
 		if (process.env.NODE_ENV !== 'production') {
